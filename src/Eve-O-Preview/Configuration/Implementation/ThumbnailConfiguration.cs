@@ -17,25 +17,47 @@ namespace EveOPreview.Configuration.Implementation
 		{
 			this.ConfigVersion = 1;
 
-			this.CycleGroup1ForwardHotkeys = new List<string> { "F14", "Control+F14" };
-			this.CycleGroup1BackwardHotkeys = new List<string> { "F13", "Control+F13" };
-			this.CycleGroup1ClientsOrder = new Dictionary<string, int>
-			{
-				{ "EVE - Example DPS Toon 1", 1 },
-				{ "EVE - Example DPS Toon 2", 2 },
-				{ "EVE - Example DPS Toon 3", 3 }
-			};
+            this.CycleGroup1ForwardHotkeys = new List<string> { "F13" };
+            this.CycleGroup1BackwardHotkeys = new List<string> { "Control+13" };
+            this.CycleGroup1ClientsOrder = new Dictionary<string, int>
+            {
+                { "EVE - Example DPS Toon 1", 1 },
+                { "EVE - Example DPS Toon 2", 2 }
+            };
 
-			this.CycleGroup2ForwardHotkeys = new List<string> { "F16", "Control+F16" };
-			this.CycleGroup2BackwardHotkeys = new List<string> { "F15", "Control+F15" };
-			this.CycleGroup2ClientsOrder = new Dictionary<string, int>
-			{
-				{ "EVE - Example Logi Toon 1", 1 },
-				{ "EVE - Example Scout Toon 2", 2 },
-				{ "EVE - Example Tackle Toon 3", 3 }
-			};
+            this.CycleGroup2ForwardHotkeys = new List<string> { "F14" };
+            this.CycleGroup2BackwardHotkeys = new List<string> { "Control+F14" };
+            this.CycleGroup2ClientsOrder = new Dictionary<string, int>
+            {
+                { "EVE - Example Logi Toon 1", 1 },
+                { "EVE - Example Logi Toon 2", 2 }
+            };
 
-			this.PerClientActiveClientHighlightColor = new Dictionary<string, Color>
+            this.CycleGroup3ForwardHotkeys = new List<string> { "F15" };
+            this.CycleGroup3BackwardHotkeys = new List<string> { "Control+F15" };
+            this.CycleGroup3ClientsOrder = new Dictionary<string, int>
+            {
+                { "EVE - Example Tackle Toon 1", 1 },
+                { "EVE - Example Tackle Toon 2", 2 }
+            };
+
+            this.CycleGroup4ForwardHotkeys = new List<string> { "F16" };
+            this.CycleGroup4BackwardHotkeys = new List<string> { "Control+F16" };
+            this.CycleGroup4ClientsOrder = new Dictionary<string, int>
+            {
+                { "EVE - Example Scout Toon 1", 1 },
+                { "EVE - Example Scout Toon 2", 2 }
+            };
+
+            this.CycleGroup5ForwardHotkeys = new List<string> { "F17" };
+            this.CycleGroup5BackwardHotkeys = new List<string> { "Control+F17" };
+            this.CycleGroup5ClientsOrder = new Dictionary<string, int>
+            {
+                { "EVE - Example Hauler Toon 1", 1 },
+                { "EVE - Example Hauler Toon 2", 2 }
+            };
+
+            this.PerClientActiveClientHighlightColor = new Dictionary<string, Color>
 			{
 				{"EVE - Example Toon 1", Color.Red},
 				{"EVE - Example Toon 2", Color.Green}
@@ -88,25 +110,52 @@ namespace EveOPreview.Configuration.Implementation
 		[JsonProperty("ConfigVersion")]
 		public int ConfigVersion { get; set; }
 
-		[JsonProperty("CycleGroup1ForwardHotkeys")]
-		public List<string> CycleGroup1ForwardHotkeys { get; set; }
+        [JsonProperty("CycleGroup1ForwardHotkeys")]
+        public List<string> CycleGroup1ForwardHotkeys { get; set; }
 
-		[JsonProperty("CycleGroup1BackwardHotkeys")]
-		public List<string> CycleGroup1BackwardHotkeys { get; set; }
+        [JsonProperty("CycleGroup1BackwardHotkeys")]
+        public List<string> CycleGroup1BackwardHotkeys { get; set; }
 
-		[JsonProperty("CycleGroup1ClientsOrder")]
-		public Dictionary<string, int> CycleGroup1ClientsOrder { get; set; }
+        [JsonProperty("CycleGroup1ClientsOrder")]
+        public Dictionary<string, int> CycleGroup1ClientsOrder { get; set; }
 
-		[JsonProperty("CycleGroup2ForwardHotkeys")]
-		public List<string> CycleGroup2ForwardHotkeys { get; set; }
+        [JsonProperty("CycleGroup2ForwardHotkeys")]
+        public List<string> CycleGroup2ForwardHotkeys { get; set; }
 
-		[JsonProperty("CycleGroup2BackwardHotkeys")]
-		public List<string> CycleGroup2BackwardHotkeys { get; set; }
+        [JsonProperty("CycleGroup2BackwardHotkeys")]
+        public List<string> CycleGroup2BackwardHotkeys { get; set; }
 
-		[JsonProperty("CycleGroup2ClientsOrder")]
-		public Dictionary<string, int> CycleGroup2ClientsOrder { get; set; }
+        [JsonProperty("CycleGroup2ClientsOrder")]
+        public Dictionary<string, int> CycleGroup2ClientsOrder { get; set; }
 
-		[JsonProperty("PerClientActiveClientHighlightColor")]
+        [JsonProperty("CycleGroup3ForwardHotkeys")]
+        public List<string> CycleGroup3ForwardHotkeys { get; set; }
+
+        [JsonProperty("CycleGroup3BackwardHotkeys")]
+        public List<string> CycleGroup3BackwardHotkeys { get; set; }
+
+        [JsonProperty("CycleGroup3ClientsOrder")]
+        public Dictionary<string, int> CycleGroup3ClientsOrder { get; set; }
+
+        [JsonProperty("CycleGroup4ForwardHotkeys")]
+        public List<string> CycleGroup4ForwardHotkeys { get; set; }
+
+        [JsonProperty("CycleGroup4BackwardHotkeys")]
+        public List<string> CycleGroup4BackwardHotkeys { get; set; }
+
+        [JsonProperty("CycleGroup4ClientsOrder")]
+        public Dictionary<string, int> CycleGroup4ClientsOrder { get; set; }
+
+        [JsonProperty("CycleGroup5ForwardHotkeys")]
+        public List<string> CycleGroup5ForwardHotkeys { get; set; }
+
+        [JsonProperty("CycleGroup5BackwardHotkeys")]
+        public List<string> CycleGroup5BackwardHotkeys { get; set; }
+
+        [JsonProperty("CycleGroup5ClientsOrder")]
+        public Dictionary<string, int> CycleGroup5ClientsOrder { get; set; }
+
+        [JsonProperty("PerClientActiveClientHighlightColor")]
 		public Dictionary<string, Color> PerClientActiveClientHighlightColor { get; set; }
 
 		public bool MinimizeToTray { get; set; }
